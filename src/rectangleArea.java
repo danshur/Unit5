@@ -12,29 +12,43 @@ public class rectangleArea {
 	
 	
 	public static void main(String[] args) {
-		System.out.println("Area of rectangle int " + computeArea(5, 2));
-		System.out.println("Area of rectangle double " + computeArea(5.5, 5.2));
-		System.out.println("Area of rectangle long " + computeArea(5.5, 5.2));
+		System.out.println("Area of rectangle int = " + computeArea(5, 2));
+		System.out.println("Area of rectangle double = " + computeArea(5.5, 5.2));
+		System.out.println("Area of rectangle long = " + computeArea(555L, 666L));
+		System.out.println("Avg of int array = " + computeIntArray(new int[] {4,16,10}));
+		System.out.println("Avg of string array = " + computeStrArray(new String[] {"Tim","John","Ed"}));
 	}
 	
 	public static int computeArea(int length, int width) {
 		return length * width;
-		
 	}
 	public static double computeArea(double lenght, double width) {
 		return lenght * width;
-		
 	}
-	public static int computeArea(long num) {
-		return num *= 4;
+	public static long computeArea(long lenght, long width) {
+		return lenght * width;
+	}
 	
+	public static double computeIntArray(int[] numbers) {
+		if (numbers == null) {
+			return 0;
+		}
+		int sum = 0;
+		for (int number : numbers) {
+			sum += number;
+		}
+		return (double) sum/numbers.length;
 	}
-	public static int computeIntArray(Array num) {
-		return 0;
 	
+	private static double computeStrArray(String[] strings) {
+		if (strings == null) {
+			return 0;
+		}
+		int sum = 0;
+		for (String string : strings) {
+			sum += string.length();
+		}
+		return (double) sum/strings.length;
 	}
-	public static int lenArrayStrings(Array num) {
-		return 0;
 	
-	}
 }
